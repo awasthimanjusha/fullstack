@@ -1,0 +1,39 @@
+NextJS Intro:
+Was introduced because of some "minor" inconsistencies in React:
+    1. In React project, we have to maintain a separate backend project for the api routes(i.e front end project is separate from the backend project)
+    2. React does not provide in built routing(we need to use third party libraries like react-router-dom)
+    3. React was not SEO optimized(this was one of the biggest reason why NextJS was introduced)
+    4. Waterfall problem
+
+    ** SEO Optimization:
+    Google crawlers could not rank React websites due to which Google did not know about a website if it was created using React
+
+    What happens when we search for something on google.com. How does it find the top 10 results
+    Google uses crawlers that are constantly running all over the world. These crawlers hit multiple websites, trying to figure out what they do and then 
+    ranking them based on relevance
+    
+    Why React apps were not SEO optimized?
+    When the crawler hits a websire, it gets an HTML. Looking at the HTML the crawler tags it, 
+    for eg when a crawler hits netflix.com, looking the the content of the home page it figures out that this site is related to streaming shows/movies online. 
+    So when someones searches for movie name, it will show Netflix in the search results
+    But if the initial HTMl does not contain any information, the crawler will have no idea what this website is about. 
+    The crawlers don't wait for the entire webpage to load(when javascript loads and runs later, it can populate content on the webpage but crawlers are 'not' browsers so it does not run the javascript)
+    And React does not give the entire content in the initial HTML(index.html had root div whose content is empty initially and once the javascript runs it fills it with the react components)
+
+    Google crawlers have now become advanced and they can now run some javascript, so ranking react websites is no longer a big issue but it was when Next JS was introduced
+
+    ** Waterfall problem
+    The request cycle in React involves multiple steps. For eg, say to get to the dashboard page of TYS app when user navigates to tys.com/dashboard
+    i. The first request goes to get the index.html page which has reference to the script file
+    ii. The second request goes to get the script file
+    iii. The third request goes to the /me route to check if the user is logged in and return the user details if logged in
+    iv. The fourth request makes the api call to get info that needs to be displayed in the dashboard page
+
+    Each of these requests happen sequentially, they waterfall because request 2 depends on request 1 outcome, request 3 depends on request 2 outcome and so on
+    This is the waterfall problem which increases the time to completely load the page because multiple requests are made one after the other
+
+    It would be great if instead we got the index.html in step i with all the info we need
+
+
+
+   
