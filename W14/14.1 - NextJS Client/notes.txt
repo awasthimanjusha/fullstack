@@ -1,3 +1,5 @@
+Reference: https://projects.100xdevs.com/tracks/nextjs-1/next-1
+
 NextJS Intro:
 Was introduced because of some "minor" inconsistencies in React:
     1. In React project, we have to maintain a separate backend project for the api routes(i.e front end project is separate from the backend project)
@@ -35,5 +37,16 @@ Was introduced because of some "minor" inconsistencies in React:
     It would be great if instead we got the index.html in step i with all the info we need
 
 
+NextJS also offers some key features over React:
+1. Server side rendering 
+   In Next, the server is able to render the JSX, put it in the HTML and send it back to the browser. This is what helps Next overcome the SEO optimization and waterfall problem discussed above
+2. API routes
+   Next JS is not just a frontend framework(like React), but it is a full stack framework. So we dont need a separate front end application
+3. File based routing
+4. Bundle size optimization, static site generation
 
-   
+
+Downsides of NextJS:
+1. Can't be distributed via a CDN. Next always needs a server running that does the server side rendering. Hence it is expensive.
+   It will not be a good choice for smaller projects.
+2. Very opinionated, very hard to move out of it(migrate the project to another framework from Next)
