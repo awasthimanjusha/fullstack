@@ -43,10 +43,21 @@ NextJS also offers some key features over React:
 2. API routes
    Next JS is not just a frontend framework(like React), but it is a full stack framework. So we dont need a separate front end application
 3. File based routing
-4. Bundle size optimization, static site generation
+4. Bundle size optimization, static site generation(SSG)
 
 
 Downsides of NextJS:
 1. Can't be distributed via a CDN. Next always needs a server running that does the server side rendering. Hence it is expensive.
    It will not be a good choice for smaller projects.
-2. Very opinionated, very hard to move out of it(migrate the project to another framework from Next)
+2. Highly opinionated, very hard to move out of it(migrate the project to another framework from Next)
+
+
+Bootstraping Next JS app:
+1. npx create-next-app@latest
+   Choose yes for App Router. This will add an app folder which will contain all your code/components/layouts/routes/apis
+
+2. Create routes  
+   Next has a file based router. 
+   So for eg, if you want to add a route for /signup then add a folder named signup inside the app folder. 
+   Add a file named page.tsx inside app/signup.
+   Create a functional react component and export it
